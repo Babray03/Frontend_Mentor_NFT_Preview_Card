@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&family=Poppins&display=swap" rel="stylesheet">
+  <title>NFT_Preview_Card</title>
+  <style>
+
+    /* CSS reset - Andy Bell*/
+
+    /* Box sizing rules */
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+
+    /* Remove default margin */
+    body,
+    h1,
+    h2,
+    h3,
+    h4,
+    p,
+    figure,
+    blockquote,
+    dl,
+    dd {
+      margin: 0;
+    }
+
+    /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+    ul[role='list'],
+    ol[role='list'] {
+      list-style: none;
+    }
+
+    /* Set core root defaults */
+    html:focus-within {
+      scroll-behavior: smooth;
+    }
+
+    /* Set core body defaults */
+    body {
+      min-height: 100vh;
+      text-rendering: optimizeSpeed;
+      line-height: 1.5;
+    }
+
+    /* A elements that don't have a class get default styles */
+    a:not([class]) {
+      text-decoration-skip-ink: auto;
+    }
+
+    /* Make images easier to work with */
+    img,
+    picture {
+      max-width: 100%;
+      display: block;
+    }
+
+    /* Inherit fonts for inputs and buttons */
+    input,
+    button,
+    textarea,
+    select {
+      font: inherit;
+    }
+
+    /* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+      html:focus-within {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+      }
+    }
+    /* Styles -- Colors: 
+    --Primary - Soft blue: hsl(215, 51%, 70%)
+- Cyan: hsl(178, 100%, 50%)
+
+--Neutral - Very dark blue (main BG): hsl(217, 54%, 11%)
+- Very dark blue (card BG): hsl(216, 50%, 16%)
+- Very dark blue (line): hsl(215, 32%, 27%)
+- White: hsl(0, 0%, 100%) */
+
+
+    /* Typography */
+    
+    h1{
+      font-family: 'Outfit', sans-serif;
+      color:white;
+      font-size:1.4rem;
+      font-weight:600;
+      margin-top:1.5rem;
+    }
+    
+    p{
+      font-family:'Outfit', sans-serif;
+      font-weight: 300;
+      color:hsl(215, 51%, 70%);
+      margin:.5rem 0rem;
+    }
+    
+    
+    .ETH__text{
+      color: hsl(178, 100%, 50%);
+      font-weight:400;
+    }
+    
+     
+ .section__b strong{
+   color:white;
+   font-weight: 300;
+ }
+
+    /* Layout */
+    
+
+    html {
+      font-size: 18px;
+    }
+
+    body {
+      background-color: hsl(220, 50%, 5%);
+    }
+
+    .container {
+      display:flex;
+      background-color:hsl(217, 54%, 11%);
+      width: 25rem;
+      margin:auto;
+      padding:1.5rem;
+      height:100vh;
+    }
+    
+    .card__bg{
+      
+      background-color: hsl(216, 50%, 16%);
+      border-radius:1rem;
+      padding:1.5rem;
+      margin:3.3rem 0rem;
+      height:auto;
+      box-shadow: .8rem 3rem .5rem hsl(217, 60%, 10%), -.8rem 2.5rem .5rem hsl(217, 60%, 10%);
+    }
+  
+    
+    
+    .section__a{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+    
+    .section__a p{
+      display:flex;
+      align-items:center;
+    }
+    
+    
+    #hr1{
+      border: .02rem solid hsl(215, 32%, 27%);
+    }
+    
+    .section__b{
+      display: flex;
+      flex-direction: row;
+      margin-top:1rem;
+    }
+    
+
+    /* image */
+    
+    .img__card img{
+      border-radius:.5rem;
+    }
+    
+ 
+ .ETH__text img{
+  display:inline-block;
+   height:1rem;
+   width:auto;
+   margin:.2rem .5rem 0rem 0rem ;
+ }
+ 
+ .timer__text img{
+  display:inline-block;
+   height:1rem;
+   width:auto;
+   margin:.2rem .5rem 0rem 0rem ;
+
+ }
+ 
+ .section__b img{
+   display:inline-block;
+   height:1.8rem;
+   width:auto;
+   margin:.2rem 1rem 0rem 0rem ;
+   border: .08rem solid white;
+   border-radius:50%;
+   
+ }
+
+ 
+
+ 
+  </style>
+</head>
+<body>
+  <main>
+    <div class="container">
+      <div class="card__bg">
+      <div class="img__card">
+        <img src="http://192.168.1.26:12345/Web+Development%2FNFT_Preview_Card%2Fimages%2Fimage-equilibrium.jpg" alt="cube">
+      </div>
+     
+      <h1>
+        Equilibrium #3429
+      </h1>
+      <p>
+        Our Equilibrium collection promotes balance and calm.
+      </p>
+
+      <div class="section__a">
+        <p class="ETH__text">
+           <img src="http://192.168.1.26:12345/Web+Development%2FNFT_Preview_Card%2Fimages%2Ficon-ethereum.svg" alt="blue diamond icon">
+          0.041ETH
+        </p>
+
+        <p class="timer__text">
+          <img src="http://192.168.1.26:12345/Web+Development%2FNFT_Preview_Card%2Fimages%2Ficon-clock.svg">
+          3 days left
+        </p>
+      </div>
+
+      <hr id="hr1">
+      <div class="section__b">
+        <img src="http://192.168.1.26:12345/Web+Development%2FNFT_Preview_Card%2Fimages%2Fimage-avatar.png">
+        <p>
+          Creation of <strong> Jules Wyvern </strong>
+        </p>
+      </div>
+      </div>
+
+    </div>
+  </main>
+</body>
+</html>
