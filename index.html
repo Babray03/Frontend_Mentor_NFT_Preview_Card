@@ -3,13 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/index.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&family=Poppins&display=swap" rel="stylesheet">
-  <title>NFT_Preview_Card</title>
+  <script src="js/index.js"></script>
+  <title>NFT_CARD</title>
   <style>
-
-    /* CSS reset - Andy Bell*/
+   /* CSS reset - Andy Bell*/
 
     /* Box sizing rules */
     *,
@@ -85,173 +86,208 @@
         scroll-behavior: auto !important;
       }
     }
-    /* Styles -- Colors: 
-    --Primary - Soft blue: hsl(215, 51%, 70%)
-- Cyan: hsl(178, 100%, 50%)
-
---Neutral - Very dark blue (main BG): hsl(217, 54%, 11%)
-- Very dark blue (card BG): hsl(216, 50%, 16%)
-- Very dark blue (line): hsl(215, 32%, 27%)
-- White: hsl(0, 0%, 100%) */
-
-
     /* Typography */
-    
-    h1{
+
+    h1 {
       font-family: 'Outfit', sans-serif;
-      color:white;
-      font-size:1.4rem;
-      font-weight:600;
-      margin-top:1.5rem;
+      color: white;
+      font-size: 1.4rem;
+      font-weight: 600;
+      margin-top: 1.5rem;
     }
-    
-    p{
-      font-family:'Outfit', sans-serif;
-      font-weight: 300;
-      color:hsl(215, 51%, 70%);
-      margin:.5rem 0rem;
-    }
-    
-    
-    .ETH__text{
+
+    h1 a:hover, p a:hover {
       color: hsl(178, 100%, 50%);
-      font-weight:400;
+      cursor: pointer;
     }
-    
-     
- .section__b strong{
-   color:white;
-   font-weight: 300;
- }
 
+    a {
+      text-decoration: none;
+    }
+
+    a:link, a:visited {
+      color: white;
+    }
+
+    .card-txt__link a:link, a:visited {
+      color: white;
+    }
+    p {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 300;
+      color: hsl(215, 51%, 70%);
+      margin: .5rem 0rem;
+    }
+
+    .card-txt__ETH {
+      color: hsl(178, 100%, 50%);
+      font-weight: 400;
+    }
     /* Layout */
-    
-
-    html {
-      font-size: 18px;
-    }
-
-    body {
-      background-color:hsl(217, 54%, 11%);
-    }
-
     .container {
-      display:flex;
-      background-color:hsl(217, 54%, 11%);
-      width: 25rem;
+      padding:0;
+      display: flex;
+      flex-direction: column;
       margin:auto;
-      padding:1.5rem;
-      height:100vh;
+      height: 100vh;
+      width: 100%;
+      background-color: hsl(217, 54%, 11%);
     }
-    
-    .card__bg{
-      
+
+    .card {
       background-color: hsl(216, 50%, 16%);
-      border-radius:1rem;
-      padding:1.5rem;
-      margin:3.3rem 0rem;
-      height:auto;
+      border-radius: 1rem;
+      padding: 1.5rem;
+      margin: auto;
+      height: 35rem;
+      width: 21rem;
+      max-width: 100%;
       box-shadow: .8rem 3rem .5rem hsl(217, 60%, 10%), -.8rem 2.5rem .5rem hsl(217, 60%, 10%);
+
     }
-  
-    
-    
-    .section__a{
+
+    .card-txt__ETHcontent {
       display: flex;
       flex-direction: row;
       justify-content: space-between;
+
     }
     
-    .section__a p{
-      display:flex;
-      align-items:center;
+    .card-txt__ETHcontent p{
+     display:flex;
+     align-items:cetner;
+    
     }
     
-    
-    #hr1{
+     #hr1{
       border: .02rem solid hsl(215, 32%, 27%);
     }
     
-    .section__b{
-      display: flex;
+    .card-txt__creation {
+      display:flex;
       flex-direction: row;
-      margin-top:1rem;
+      align-items:center;
+      
     }
     
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+    .attribution a {
+      color: white;
+    }
 
-    /* image */
-    
-    .img__card img{
-      border-radius:.5rem;
+    /* Images */
+
+    .card-img {
+      max-width: 100%;
+      height: auto;
     }
     
- 
- .ETH__text img{
-  display:inline-block;
-   height:1rem;
-   width:auto;
-   margin:.2rem .5rem 0rem 0rem ;
- }
- 
- .timer__text img{
-  display:inline-block;
-   height:1rem;
-   width:auto;
-   margin:.2rem .5rem 0rem 0rem ;
+    .card-img__container{
+      position:relative;
+      display:flex;
+      align-items:center;
+      justify-content:center;
 
- }
- 
- .section__b img{
+    }
+  
+  .card-img__overlay{
+    position: absolute;
+    display:flex;
+    align-items:center;
+    justify-content: center;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    opacity:0;
+    transition: all 0.5s ease-out;
+    background-color:hsl(178, 100%, 50%);
+    
+  }
+  
+  .card-img__overlay:hover{
+    opacity:.8;
+
+  }
+
+
+    #card-img__diamond {
+  height:1.5rem;
+  margin:0rem .5rem 0rem 0rem;
+     
+    }
+    #card-img__clock {
+      height:1.5rem;
+  margin:0rem .5rem 0rem 0rem;
+    }
+    
+    .card-txt__creation img{
    display:inline-block;
-   height:1.8rem;
+   height:2.4rem;
    width:auto;
-   margin:.2rem 1rem 0rem 0rem ;
+   margin:0rem 1rem 0rem 0rem ;
    border: .08rem solid white;
    border-radius:50%;
-   
- }
-
- 
-
- 
+    }
+    
+  .card-txt__creation img, .card-text__creation p{
+    margin-top:.5rem;
+  }
   </style>
 </head>
 <body>
   <main>
     <div class="container">
-      <div class="card__bg">
-      <div class="img__card">
+      <div class="card">
+      <a href="#">
+        <div class="card-img__container">
         <img src="images/image-equilibrium.jpg" alt="cube">
-      </div>
-     
-      <h1>
-        Equilibrium #3429
-      </h1>
-      <p>
-        Our Equilibrium collection promotes balance and calm.
-      </p>
+          
+            <div class="card-img__overlay">
+          <img src="images/2Ficon-view.svg" alt="eye icon">
+        </div>
+          
+        </div>
+        
+        </a>
 
-      <div class="section__a">
-        <p class="ETH__text">
-           <img src="images/icon-ethereum.svg" alt="blue diamond icon">
-          0.041ETH
-        </p>
+        <div class="card-txt__title">
+          <h1> <a>Equilibrium #3429</a></h1>
+        </div>
 
-        <p class="timer__text">
-          <img src="images/icon-clock.svg" alt="clock">
-          3 days left
-        </p>
+        <div class="card-txt__content">
+          <p>
+            Our Equilibrium collection promotes balance and calm.
+          </p>
+        </div>
+
+        <div class="card-txt__ETHcontent">
+          <p class="card-txt__ETH">
+           <img src="images/icon-ethereum.svg" alt="blue diamond icon"> 0.041 ETH
+          </p>
+          <p>
+            <img src="images/icon-clock.svg" alt="clock icon">3 days left
+          </p>
+
+        </div>
+
+        <hr id="hr1">
+
+        <div class="card-txt__creation">
+                <img src="images/image-avatar.png" alt="profile picture">
+          <p>  Creation of <a href="#"class="card-txt__link"> Jules Wyvern</a>
+          </p>
+        </div>
+
       </div>
 
-      <hr id="hr1">
-      <div class="section__b">
-        <img src="images/image-avatar.png" alt="profile picture">
-        <p>
-          Creation of <strong> Jules Wyvern </strong>
-        </p>
+      <div class="attribution">
+      <p>  Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+        Coded by <a href="#">@Babray03</a>. </p>
       </div>
-      </div>
-
     </div>
   </main>
 </body>
